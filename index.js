@@ -9,7 +9,9 @@ function submitData(e) {
 
 function calculate(sum, day, percent, isCapital) {
 	/* TODO: Нужно написать данную функцию */
-
-
+	if (isCapital) {
+		return sum * (1 + percent / 100 / 365) ** day - sum;
+	}
+	return sum * percent * day / 365 / 100
 	/* TODO: Вернуть получившееся значение */
 }
